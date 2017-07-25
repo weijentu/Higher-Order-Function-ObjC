@@ -28,12 +28,9 @@
     return mutableArray;
 }
 
-- (id)reduce:(id (^)(id obj0, id obj1))block {
-    __block id obj = [self firstObject];
+- (id)reduce:(id)initial block:(id (^)(id obj, id _obj))block {
+    __block id obj = initial;
     [self enumerateObjectsUsingBlock:^(id _obj, NSUInteger idx, BOOL *stop) {
-        if (idx == 0) {
-            return;
-        }
         obj = block(obj, _obj);
     }];
     return obj;

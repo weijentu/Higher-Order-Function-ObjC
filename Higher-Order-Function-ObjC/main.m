@@ -34,8 +34,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@", [array filter:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"o"]; }]);
         
         // Reduce: Combine all elements in an array to create a single output.
-        NSLog(@"%@", [array reduce:^id(id obj0 ,id obj1) { return [NSString stringWithFormat:@"%@%@", obj0, obj1]; }]);
-        
+        NSLog(@"%@", [array reduce:@"Hey, " block:^id(id obj ,id _obj) { return [NSString stringWithFormat:@"%@%@", obj, _obj]; }]);
         array = @[
                   @[@"H", @"e", @"l", @"l", @"o"],
                   @[@",", @" "],

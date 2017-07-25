@@ -12,7 +12,7 @@
 
 - (NSArray *)map:(id (^)(id obj))block;
 - (NSArray *)filter:(BOOL (^)(id obj))block;
-- (id)reduce:(id (^)(id obj0, id obj1))block;
+- (id)reduce:(id)initial block:(id (^)(id obj, id _obj))block;
 - (NSArray *)flatMap:(id (^)(id obj))block;
 
 @end
