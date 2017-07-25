@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2D49B41F27C6F2004BD26D /* NSArray+HOFC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D49B31F27C6F2004BD26D /* NSArray+HOFC.m */; };
+		9F2D49B71F27C740004BD26D /* ExampleUsages.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D49B61F27C740004BD26D /* ExampleUsages.m */; };
 		9FACAC831F26EE6900BEA488 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FACAC821F26EE6900BEA488 /* main.m */; };
 		9FACAC8B1F26EF5100BEA488 /* NSArray+HOF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FACAC8A1F26EF5100BEA488 /* NSArray+HOF.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9F2D49B21F27C6F2004BD26D /* NSArray+HOFC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HOFC.h"; sourceTree = "<group>"; };
+		9F2D49B31F27C6F2004BD26D /* NSArray+HOFC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HOFC.m"; sourceTree = "<group>"; };
+		9F2D49B51F27C740004BD26D /* ExampleUsages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleUsages.h; sourceTree = "<group>"; };
+		9F2D49B61F27C740004BD26D /* ExampleUsages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleUsages.m; sourceTree = "<group>"; };
 		9FACAC7F1F26EE6900BEA488 /* Higher-Order-Function-ObjC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Higher-Order-Function-ObjC"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FACAC821F26EE6900BEA488 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9FACAC891F26EF5100BEA488 /* NSArray+HOF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HOF.h"; sourceTree = "<group>"; };
@@ -63,6 +69,10 @@
 				9FACAC821F26EE6900BEA488 /* main.m */,
 				9FACAC891F26EF5100BEA488 /* NSArray+HOF.h */,
 				9FACAC8A1F26EF5100BEA488 /* NSArray+HOF.m */,
+				9F2D49B21F27C6F2004BD26D /* NSArray+HOFC.h */,
+				9F2D49B31F27C6F2004BD26D /* NSArray+HOFC.m */,
+				9F2D49B51F27C740004BD26D /* ExampleUsages.h */,
+				9F2D49B61F27C740004BD26D /* ExampleUsages.m */,
 			);
 			path = "Higher-Order-Function-ObjC";
 			sourceTree = "<group>";
@@ -126,6 +136,8 @@
 			files = (
 				9FACAC8B1F26EF5100BEA488 /* NSArray+HOF.m in Sources */,
 				9FACAC831F26EE6900BEA488 /* main.m in Sources */,
+				9F2D49B71F27C740004BD26D /* ExampleUsages.m in Sources */,
+				9F2D49B41F27C6F2004BD26D /* NSArray+HOFC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +266,7 @@
 				9FACAC881F26EE6900BEA488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (Extensions)
+@interface NSArray (HOF)
 
 - (NSArray *)map:(id (^)(id obj))block;
 - (NSArray *)filter:(BOOL (^)(id obj))block;
@@ -16,13 +16,4 @@
        block:(id (^)(id obj, id _obj))block;
 - (NSArray *)flatMap:(id (^)(id obj))block;
 
-- (NSArray *)map:(id (^)(id obj))block
-           class:(Class)aClass;
-- (NSArray *)filter:(BOOL (^)(id obj))block
-              class:(Class)aClass;
-- (id)reduce:(id)initial
-       block:(id (^)(id obj, id _obj))block
-       class:(Class)aClass;
-- (NSArray *)flatMap:(id (^)(id obj))block
-               class:(Class)aClass;
 @end
