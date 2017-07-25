@@ -1,8 +1,7 @@
 # Higher Order Functions in Objective-C
 The project is trying to implement similar manners at higher order function  in *Swift* standard library. Currently `Map`, `Filter`, `Reduce` and `FlatMap` with/without class restrictor have been implemented for NSArray.
 
-## Usage:
-> Map:   
+## Map:   
 > Iterate an array and applies the same block operation to each element in it.
 
 *Without class restrictor*
@@ -15,7 +14,7 @@ The project is trying to implement similar manners at higher order function  in 
 [array map:^id(id obj) { return [(NSString *)obj uppercaseString]; } class:[NSString class]]
 ```
 
-> Filter:   
+## Filter:   
 > Iterate an array and return elements that meet a condition.
 
 *Without class restrictor*
@@ -28,7 +27,7 @@ The project is trying to implement similar manners at higher order function  in 
 [array filter:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"o"]; } class:[NSString class]]
 ```
 
-> Reduce:  
+## Reduce:  
 > Combine all elements in an array to create a single output.
 
 *Without class restrictor*
@@ -41,7 +40,7 @@ The project is trying to implement similar manners at higher order function  in 
 [array reduce:@"Hey, " block:^id(id obj ,id _obj) { return [NSString stringWithFormat:@"%@%@", obj, _obj]; } class:[NSString class]]
 ```
 
-> FlatMap:  
+## FlatMap:  
 > Flatten an array of arrays.
 
 *Without class restrictor*
