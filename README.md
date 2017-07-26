@@ -40,6 +40,19 @@ The project is trying to implement similar manners at higher order function  in 
 [array reduce:@"Hey, " block:^id(id obj ,id _obj) { return [NSString stringWithFormat:@"%@%@", obj, _obj]; } class:[NSString class]]
 ```
 
+## Contains:  
+> Iterate an array and chekc if any element satisfies a condition.
+
+*Without class restrictor*
+```objectivec
+[array contains:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"H"]; }]
+```
+
+*With class restrictor*
+```objectivec
+[array contains:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"H"]; } class:[NSString class]]
+```
+
 ## FlatMap:  
 > Flatten an array of arrays.
 
