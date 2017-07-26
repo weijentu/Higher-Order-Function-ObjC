@@ -38,7 +38,11 @@
     NSLog(@"%@", [array filter:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"o"]; }]);
     
     // Reduce: Combine all elements in an array to create a single output.
-    NSLog(@"%@", [array reduce:@"Hey, " block:^id(id obj ,id _obj) { return [NSString stringWithFormat:@"%@%@", obj, _obj]; }]);
+    NSLog(@"%@", [array reduce:@"Hey, " block:^id(id obj1 ,id obj2) { return [NSString stringWithFormat:@"%@%@", obj1, obj2]; }]);
+    
+    // Contains: Iterate an array and chekc if any element satisfies a condition.
+    NSLog(@"%@", [array contains:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"H"]; }] ? @"YES" : @"NO");
+    
     array = @[
               @[@"H", @"e", @"l", @"l", @"o"],
               @[@",", @" "],
@@ -46,7 +50,6 @@
               ];
     // FlatMap: Flatten an array of arrays.
     NSLog(@"%@", [array flatMap:^id(id obj) { return obj; }]);
-
 }
 
 #pragma mark -- Example 2: with class restrictor
@@ -76,7 +79,11 @@
     NSLog(@"%@", [array filter:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"o"]; } class:[NSString class]]);
     
     // Reduce: Combine all elements in an array to create a single output.
-    NSLog(@"%@", [array reduce:@"Hey, " block:^id(id obj ,id _obj) { return [NSString stringWithFormat:@"%@%@", obj, _obj]; } class:[NSString class]]);
+    NSLog(@"%@", [array reduce:@"Hey, " block:^id(id obj1 ,id obj2) { return [NSString stringWithFormat:@"%@%@", obj1, obj2]; } class:[NSString class]]);
+    
+    // Contains: Iterate an array and chekc if any element satisfies a condition.
+    NSLog(@"%@", [array contains:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"H"]; } class:[NSString class]] ? @"YES" : @"NO");
+    
     array = @[
               @[@"H", @"e", @"l", @"l", @"o"],
               @[@",", @" ", @3],

@@ -35,7 +35,7 @@
 }
 
 - (id)reduce:(id)initial
-       block:(id (^)(id obj, id _obj))block
+       block:(id (^)(id obj1, id obj2))block
        class:(Class)aClass {
     __block id obj = initial;
     [self enumerateObjectsUsingBlock:^(id _obj, NSUInteger idx, BOOL *stop) {
@@ -64,6 +64,21 @@
         }
     }];
     return mutableArray;
+}
+
+- (BOOL)contains:(BOOL (^)(id obj))block
+           class:(Class)aClass {
+    __block BOOL contains = NO;
+    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if (![obj isKindOfClass:aClass]) {
+            return;
+        }
+        
+        if (block(obj) == YES) {
+            contains = YES;
+        }
+    }];
+    return contains;
 }
 
 @end

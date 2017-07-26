@@ -15,9 +15,10 @@
 - (NSArray *)filter:(BOOL (^)(id obj))block
               class:(Class)aClass;
 - (id)reduce:(id)initial
-       block:(id (^)(id obj, id _obj))block
+       block:(id (^)(id obj1, id obj2))block
        class:(Class)aClass;
 - (NSArray *)flatMap:(id (^)(id obj))block
                class:(Class)aClass;
-
+- (BOOL)contains:(BOOL (^)(id obj))block
+           class:(Class)aClass;
 @end

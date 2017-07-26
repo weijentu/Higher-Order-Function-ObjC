@@ -11,6 +11,9 @@ print(characters.map({ String($0).uppercased() }))
 // Filter: Iterate a collection and return elements that meet a condition.
 print(characters.filter({ $0 == "o"}))
 
+// Contains: Iterate an array and chekc if any element satisfies a condition.
+print(characters.contains{ $0 == "o"} ? "YES" : "NO")
+
 // Reduce: Combine all elements in a collection to create a single output.
 print(characters.reduce("", { String($0) + String($1) }))
 

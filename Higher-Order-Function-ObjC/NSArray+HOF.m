@@ -30,7 +30,7 @@
 }
 
 - (id)reduce:(id)initial
-       block:(id (^)(id obj, id _obj))block {
+       block:(id (^)(id obj1, id obj2))block {
     __block id obj = initial;
     [self enumerateObjectsUsingBlock:^(id _obj, NSUInteger idx, BOOL *stop) {
         obj = block(obj, _obj);
@@ -50,6 +50,16 @@
         [mutableArray addObject:_obj];
     }];
     return mutableArray;
+}
+
+- (BOOL)contains:(BOOL (^)(id obj))block {
+    __block BOOL contains = NO;
+    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if (block(obj) == YES) {
+            contains = YES;
+        }
+    }];
+    return contains;
 }
 
 @end
