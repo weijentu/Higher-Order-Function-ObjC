@@ -32,12 +32,12 @@ The project is trying to implement similar manners at higher order function  in 
 
 *Without class restrictor*
 ```objectivec
-[array reduce:@"Hey, " block:^id(id obj ,id _obj) { return [NSString stringWithFormat:@"%@%@", obj, _obj]; }]
+[array reduce:@"Hey, " block:^id(id obj1, id obj2) { return [NSString stringWithFormat:@"%@%@", obj1, obj2]; }]
 ```
 
 *With class restrictor*
 ```objectivec
-[array reduce:@"Hey, " block:^id(id obj ,id _obj) { return [NSString stringWithFormat:@"%@%@", obj, _obj]; } class:[NSString class]]
+[array reduce:@"Hey, " block:^id(id obj1, id obj2) { return [NSString stringWithFormat:@"%@%@", obj1, obj2]; } class:[NSString class]]
 ```
 
 ## Contains:  
