@@ -1,5 +1,5 @@
 # Higher Order Functions in Objective-C
-The project is trying to implement similar manners at higher order function  in *Swift* standard library. Currently `Map`, `Filter`, `Reduce` and `FlatMap` with/without class restrictor have been implemented for NSArray.
+The project is trying to implement similar manners at higher order function  in *Swift* standard library. Currently `Map`, `Filter`, `Reduce`, `Contains`, `ForEach` and `FlatMap` with/without class restrictor have been implemented for NSArray.
 
 ## Map:   
 > Iterate an array and applies the same block operation to each element in it.
