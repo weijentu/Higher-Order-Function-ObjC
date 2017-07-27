@@ -41,7 +41,7 @@ The project is trying to implement similar manners at higher order function  in 
 ```
 
 ## Contains:  
-> Iterate an array and chekc if any element satisfies a condition.
+> Iterate an array and check if any element satisfies a condition.
 
 *Without class restrictor*
 ```objectivec
@@ -51,6 +51,19 @@ The project is trying to implement similar manners at higher order function  in 
 *With class restrictor*
 ```objectivec
 [array contains:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"H"]; } class:[NSString class]]
+```
+
+## ForEach:  
+> A short-hand for the for loop.
+
+*Without class restrictor*
+```objectivec
+[array forEach:^(id obj) { NSLog(@"%@", obj); } ]
+```
+
+*With class restrictor*
+```objectivec
+[array forEach:^(id obj) { NSLog(@"%@", obj); } class:[NSString class]]
 ```
 
 ## FlatMap:  

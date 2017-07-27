@@ -21,4 +21,7 @@
                class:(Class)aClass;
 - (BOOL)contains:(BOOL (^)(id obj))block
            class:(Class)aClass;
+- (void)forEach:(void (^)(id obj))block
+          class:(Class)aClass;
+
 @end

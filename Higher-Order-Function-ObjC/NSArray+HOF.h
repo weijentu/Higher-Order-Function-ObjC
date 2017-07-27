@@ -16,5 +16,6 @@
        block:(id (^)(id obj1, id obj2))block;
 - (NSArray *)flatMap:(id (^)(id obj))block;
 - (BOOL)contains:(BOOL (^)(id obj))block;
+- (void)forEach:(void (^)(id obj))block;
 
 @end

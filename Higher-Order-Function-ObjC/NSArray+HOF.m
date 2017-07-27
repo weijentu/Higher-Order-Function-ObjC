@@ -57,9 +57,16 @@
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if (block(obj) == YES) {
             contains = YES;
+            *stop = YES;
         }
     }];
     return contains;
+}
+
+- (void)forEach:(void (^)(id obj))block {
+    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        block(obj);
+    }];
 }
 
 @end

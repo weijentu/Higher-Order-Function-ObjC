@@ -38,10 +38,13 @@
     NSLog(@"%@", [array filter:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"o"]; }]);
     
     // Reduce: Combine all elements in an array to create a single output.
-    NSLog(@"%@", [array reduce:@"Hey, " block:^id(id obj1 ,id obj2) { return [NSString stringWithFormat:@"%@%@", obj1, obj2]; }]);
+    NSLog(@"%@", [array reduce:@"Hey, " block:^id(id obj1, id obj2) { return [NSString stringWithFormat:@"%@%@", obj1, obj2]; }]);
     
     // Contains: Iterate an array and chekc if any element satisfies a condition.
     NSLog(@"%@", [array contains:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"H"]; }] ? @"YES" : @"NO");
+    
+    // ForEach: A short-hand for the for loop.
+    [array forEach:^(id obj) { NSLog(@"%@", obj); }];
     
     array = @[
               @[@"H", @"e", @"l", @"l", @"o"],
@@ -76,13 +79,16 @@
     NSLog(@"%@", [array map:^id(id obj) { return [(NSString *)obj uppercaseString]; } class:[NSString class]]);
     
     // Filter: Iterate an array and return elements that meet a condition.
-    NSLog(@"%@", [array filter:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"o"]; } class:[NSString class]]);
+    NSLog(@"%@", [array filter:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"H"]; } class:[NSString class]]);
     
     // Reduce: Combine all elements in an array to create a single output.
-    NSLog(@"%@", [array reduce:@"Hey, " block:^id(id obj1 ,id obj2) { return [NSString stringWithFormat:@"%@%@", obj1, obj2]; } class:[NSString class]]);
+    NSLog(@"%@", [array reduce:@"Hey, " block:^id(id obj1, id obj2) { return [NSString stringWithFormat:@"%@%@", obj1, obj2]; } class:[NSString class]]);
     
     // Contains: Iterate an array and chekc if any element satisfies a condition.
     NSLog(@"%@", [array contains:^BOOL(id obj) { return [(NSString *)obj isEqualToString:@"H"]; } class:[NSString class]] ? @"YES" : @"NO");
+    
+    // ForEach: A short-hand for the for loop.
+    [array forEach:^(id obj) { NSLog(@"%@", obj); } class:[NSString class]];
     
     array = @[
               @[@"H", @"e", @"l", @"l", @"o"],

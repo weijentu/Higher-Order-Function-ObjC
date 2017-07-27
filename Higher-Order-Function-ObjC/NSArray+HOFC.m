@@ -76,9 +76,20 @@
         
         if (block(obj) == YES) {
             contains = YES;
+            *stop = YES;
         }
     }];
     return contains;
+}
+
+- (void)forEach:(void (^)(id obj))block
+          class:(Class)aClass {
+    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if (![obj isKindOfClass:aClass]) {
+            return;
+        }
+        block(obj);
+    }];
 }
 
 @end
