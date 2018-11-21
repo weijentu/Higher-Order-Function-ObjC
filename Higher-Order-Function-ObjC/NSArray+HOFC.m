@@ -19,7 +19,7 @@
             [mutableArray addObject:block(obj)];
         }
     }];
-    return mutableArray;
+    return [mutableArray copy];
 }
 
 - (NSArray *)filter:(BOOL (^)(id obj))block
@@ -31,7 +31,7 @@
             [mutableArray addObject:obj];
         }
     }];
-    return mutableArray;
+    return [mutableArray copy];
 }
 
 - (id)reduce:(id)initial
@@ -63,7 +63,7 @@
             [mutableArray addObject:_obj];
         }
     }];
-    return mutableArray;
+    return [mutableArray copy];
 }
 
 - (BOOL)contains:(BOOL (^)(id obj))block
